@@ -1,7 +1,6 @@
 <template>
   <div>
     <BarraNavegacion />
-    <!-- Se trabaja dentro de esta vista con componentes para hacerla dinamica -->
     <b-container>
       <b-row>
         <b-col cols="8">
@@ -53,7 +52,7 @@
             </v-card>
             <div class="p-2 my-3">
               <h4 class="p-3">Menú</h4>
-              <DesplegableMenu :es-editable="false"/>
+              <DesplegableMenu :es-editable="false" />
             </div>
             <div class="p-2 my-3">
               <h4 class="p-3">Fotos de usuarios</h4>
@@ -91,9 +90,18 @@
           <div class="shadow-sm p-3 mb-5 mt-5 bg-white rounded">
             <p>Categorías</p>
             <v-chip class="mx-2 my-2" dark color="#41C5D3">Ambiente</v-chip>
-            <v-chip class="mx-2 my-2" dark color="#41C5D3">Tipo de comida</v-chip>
+            <v-chip class="mx-2 my-2" dark color="#41C5D3"
+              >Tipo de comida</v-chip
+            >
             <v-chip class="mx-2 my-2" dark color="#41C5D3">Servicios</v-chip>
-            <v-chip class="mx-2 my-2" dark color="#41C5D3">Métodos de pago</v-chip>
+            <v-chip class="mx-2 my-2" dark color="#41C5D3"
+              >Métodos de pago</v-chip
+            >
+            <div class="ubicacionBotones mt-4">
+              <v-btn color="#41C5D3" block dark @click="guardarRolesEmpresa"
+                >RESERVAR</v-btn
+              >
+            </div>
           </div>
         </b-col>
       </b-row>
@@ -101,7 +109,7 @@
   </div>
 </template>
 <script>
-import BarraNavegacion from './barraNavegacion/BarraNavegacion';
+import BarraNavegacion from "./barraNavegacion/BarraNavegacion";
 import DesplegableMenu from "./DesplegableMenu";
 // import axios from "axios";
 export default {

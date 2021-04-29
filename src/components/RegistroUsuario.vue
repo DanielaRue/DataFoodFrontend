@@ -174,7 +174,7 @@
               </b-row>
               <div class="ubicacionBotones">
                 <router-link to="PreferenciasUsuario">
-                  <v-btn color="#41C5D3" dark @click="crearUsuario">Continuar</v-btn>
+                  <v-btn color="#41C5D3" dark >Continuar</v-btn>
                 </router-link>
               </div>
             </form>
@@ -187,7 +187,6 @@
 </template>
 <script>
 import BarraNavegacion from './barraNavegacion/BarraNavegacion'
-import axios from "axios";
 export default {
   name: "crearUsuario",
   components:{

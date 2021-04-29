@@ -18,9 +18,6 @@
                 Vincular Cuentas
               </v-btn></router-link
             >
-            <v-btn class="ma-2" block outlined color="#FF4B4B">
-              Estadisticas
-            </v-btn>
           </div>
         </b-col>
         <b-col cols="8">
@@ -387,7 +384,7 @@
               </b-form-group>
             </div>
             <div class="ubicacionBotones">
-              <v-btn color="#41C5D3" dark>Guardar</v-btn>
+              <v-btn color="#41C5D3" dark @click="crearEmpresa">Guardar</v-btn>
             </div>
           </div>
         </b-col>
@@ -614,6 +611,11 @@ export default {
       );
     },
   },
+  methods:{
+    crearEmpresa(){
+      this.$router.push("/CartaEmpresa")
+    }
+  }
 };
 </script>
 <style>

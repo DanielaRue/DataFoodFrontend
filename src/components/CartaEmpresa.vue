@@ -18,9 +18,6 @@
                 Vincular Cuentas
               </v-btn></router-link
             >
-            <v-btn class="ma-2" block outlined color="#FF4B4B">
-              Estadisticas
-            </v-btn>
           </div>
         </b-col>
         <b-col cols="8">
@@ -31,7 +28,7 @@
             </h6>
             <DesplegableMenu :es-editable="true" />
             <div class="ubicacionBotones mt-4">
-              <v-btn color="#41C5D3" dark>Guardar</v-btn>
+              <v-btn color="#41C5D3" dark @click="guardarCartaEmpresa">Guardar</v-btn>
             </div>
           </div>
         </b-col>
@@ -52,6 +49,11 @@ export default {
     return {
       
     };
+  },
+  methods:{
+    guardarCartaEmpresa(){
+      this.$router.push("/Roles")
+    }
   }
 };
 </script>

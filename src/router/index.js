@@ -73,12 +73,12 @@ const router = new Router({
       component: Estadisticas
     },
     {
-      path: '/Restaurante/:id',
+      path: '/Restaurante',
       name: 'Restaurante',
       component: Restaurante,
-      meta: {
-        requiresAuth: true
-      }
+      // meta: {
+      //   requiresAuth: true
+      // }
     },
     
   ]

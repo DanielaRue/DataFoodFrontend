@@ -66,7 +66,7 @@
               </div>
             </b-container>
             <div class="ubicacionBotones">
-              <v-btn color="#41C5D3" dark>Guardar</v-btn>
+              <v-btn color="#41C5D3" dark @click="crearUsuario">Guardar</v-btn>
             </div>
           </div>
         </b-col>
@@ -191,6 +191,12 @@ export default {
       return this.options.filter((opt) => this.value.indexOf(opt) === -1);
     },
   },
+  methods:{
+    crearUsuario(){
+      this.$router.push("/InicioSesion")
+
+    }
+  }
 };
 </script>
 <style>

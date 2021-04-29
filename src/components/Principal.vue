@@ -75,13 +75,13 @@
                     <b-col sm="8"> Horarios {{ item.horarios }}</b-col>
                   </b-row>
                 </p>
-                <router-link></router-link>
                 <v-btn
                   class="ubicacionBotones"
                   elevation="2"
                   x-small
                   dark
                   color="#FF4B4B"
+                  @click="verMas"
                   >VER MÁS</v-btn
                 >
                 <v-divider></v-divider>
@@ -168,6 +168,11 @@ export default {
   mounted() {
     
   },
+  methods:{
+    verMas(){
+      this.$router.push("/Restaurante")
+    }
+  }
 };
 </script>
 
@@ -179,7 +184,7 @@ export default {
 } */
 .ubicacionBotones {
   text-align: right;
-  margin-left: 350px;
+  margin-left: 450px;
 }
 .v-navigation-drawer__content {
   height: 100vh;

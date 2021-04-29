@@ -20,9 +20,6 @@
                 Vincular Cuentas
               </v-btn></router-link
             >
-            <v-btn class="ma-2" block outlined color="#FF4B4B">
-              Estadisticas
-            </v-btn>
           </div>
         </b-col>
         <b-col cols="8">
@@ -53,6 +50,11 @@
               <b-table striped hover :items="roles" :fields="fields"></b-table>
             </div>
           </div>
+          <div class="ubicacionBotones mt-4">
+            <v-btn color="#41C5D3" dark @click="guardarRolesEmpresa"
+              >Guardar</v-btn
+            >
+          </div>
         </b-col>
         <b-col></b-col>
       </b-row>
@@ -60,10 +62,10 @@
   </div>
 </template>
 <script>
-import BarraNavegacion from './barraNavegacion/BarraNavegacion'
+import BarraNavegacion from "./barraNavegacion/BarraNavegacion";
 export default {
-  components:{
-    BarraNavegacion
+  components: {
+    BarraNavegacion,
   },
   data() {
     return {
@@ -105,6 +107,9 @@ export default {
     saveRoles() {
       const parsed = JSON.stringify(this.roles);
       localStorage.setItem("roles", parsed);
+    },
+    guardarRolesEmpresa() {
+      this.$router.push("/InicioSesion");
     },
   },
 };

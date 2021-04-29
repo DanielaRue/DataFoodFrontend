@@ -18,9 +18,6 @@
                 Vincular Cuentas
               </v-btn></router-link
             >
-            <v-btn class="ma-2" block outlined color="#FF4B4B">
-              Estadisticas
-            </v-btn>
           </div>
         </b-col>
         <b-col cols="8">
