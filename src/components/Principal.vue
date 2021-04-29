@@ -8,21 +8,52 @@
             <v-card elevation="1" width="246" height="100vh">
               <v-navigation-drawer floating permanent>
                 <v-list dense rounded class="mt-12">
-                  <v-list-item
-                    v-for="item in itemsFiltros"
-                    :key="item.title"
-                    link
-                  >
-                    <v-list-item-icon>
-                      <v-icon small color="#F95A37">{{ item.icon }}</v-icon>
-                    </v-list-item-icon>
+                  <div>
+                    <v-dialog v-model="dialog" width="500">
+                      <template v-slot:activator="{ on, attrs }">
+                        <v-list-item
+                          v-for="item in itemsFiltros"
+                          :key="item.title"
+                          color="red lighten-2"
+                          v-bind="attrs"
+                          v-on="on"
+                        >
+                          <v-list-item-icon>
+                            <v-icon small color="#F95A37">{{
+                              item.icon
+                            }}</v-icon>
+                          </v-list-item-icon>
 
-                    <v-list-item-content>
-                      <v-list-item-title>
-                        {{ item.title }}
-                      </v-list-item-title>
-                    </v-list-item-content>
-                  </v-list-item>
+                          <v-list-item-content>
+                            <v-list-item-title>
+                              {{ item.title }}
+                            </v-list-item-title>
+                          </v-list-item-content>
+                        </v-list-item>
+                      </template>
+
+                      <v-card class="text-center">
+                        <v-card-title class="text-center">
+                          EN DESARROLLO
+                        </v-card-title>
+
+                        <v-card-text>
+                          Estamos trabajando para brindarte una mejor
+                          experiencia.<br />
+                          Pronto podrás conocer todos nuestros servicios.
+                        </v-card-text>
+
+                        <v-divider></v-divider>
+
+                        <v-card-actions>
+                          <v-spacer></v-spacer>
+                          <v-btn color="#41C5D3" text @click="dialog = false">
+                            ACEPTAR
+                          </v-btn>
+                        </v-card-actions>
+                      </v-card>
+                    </v-dialog>
+                  </div>
                 </v-list>
               </v-navigation-drawer>
             </v-card>
@@ -86,7 +117,6 @@
                 >
                 <v-divider></v-divider>
               </b-media>
-              
             </ul>
           </div>
         </b-col>
@@ -105,11 +135,8 @@ export default {
   },
   data() {
     return {
-      listaRestaurantes: [
-        {
-
-        }
-      ],
+      dialog: false,
+      listaRestaurantes: [{}],
       itemsFiltros: [
         { title: "Zona", icon: "mdi-view-dashboard" },
         { title: "Tipo de establecimiento", icon: "mdi-silverware-fork-knife" },
@@ -165,14 +192,12 @@ export default {
       ],
     };
   },
-  mounted() {
-    
+  mounted() {},
+  methods: {
+    verMas() {
+      this.$router.push("/Restaurante");
+    },
   },
-  methods:{
-    verMas(){
-      this.$router.push("/Restaurante")
-    }
-  }
 };
 </script>
 
