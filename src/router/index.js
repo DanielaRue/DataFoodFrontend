@@ -16,6 +16,7 @@ import Dane from '@/components/Reportes/Dane'
 import Instagram from '@/components/Reportes/Instagram'
 import Facebook from '@/components/Reportes/Facebook'
 import OtrosActores from '@/components/Reportes/OtrosActores'
+import Google from '@/components/Reportes/Google'
 import EnConstruccion from '@/components/EnConstruccion'
 
 Vue.use(Router)
@@ -109,6 +110,11 @@ const router = new Router({
       path: '/OtrosActores',
       name: 'OtrosActores',
       component: OtrosActores
+    },
+    {
+      path: '/Google',
+      name: 'Google',
+      component: Google
     },
     
   ]

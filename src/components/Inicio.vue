@@ -43,7 +43,9 @@ export default {
     BarraNavegacion
   },
   data() {
-    return {};
+    return {
+      
+    };
   },
   methods: {
     // submit() {

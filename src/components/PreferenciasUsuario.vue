@@ -1,16 +1,7 @@
 <template>
   <div>
-    <BarraNavegacion />
-    <b-container class="mt-5">
-      <b-row>
-        <b-col></b-col>
         <b-col cols="8">
-          <div class="shadow-sm p-3 mb-5 bg-white rounded">
-            <h6>
-              Queremos conocer tus preferencias para brindarte una mejor
-              experiencia.
-            </h6>
-            <b-container class="usuario">
+          <div>
               <div class="mt-4 ubicacionFormulario">
                 <b-form-group label-for="tags-component-select">
                   <b-form-tags
@@ -64,22 +55,14 @@
                   </b-form-tags>
                 </b-form-group>
               </div>
-            </b-container>
-            <div class="ubicacionBotones">
-              <v-btn color="#41C5D3" dark @click="crearUsuario">Guardar</v-btn>
-            </div>
           </div>
         </b-col>
-        <b-col></b-col>
-      </b-row>
-    </b-container>
   </div>
 </template>
 <script>
-import BarraNavegacion from './barraNavegacion/BarraNavegacion'
 export default {
   components: {
-    BarraNavegacion,
+
   },
   data() {
     return {
@@ -211,6 +194,6 @@ export default {
   margin-right: 9px;
 }
 .ubicacionFormulario {
-  width: 600px;
+  width: 630px;
 }
 </style>

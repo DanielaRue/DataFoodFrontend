@@ -4,7 +4,7 @@
     <v-container>
       <v-row>
         <v-col cols="6">
-          <v-btn class="mt-4" color="#003458" block elevation="4" plain x-large
+          <v-btn class="mt-4" color="#003458" block elevation="4" plain x-large to="/Google"
             ><v-icon class="mx-5">mdi-google</v-icon>GOOGLE</v-btn
           >
         </v-col>
