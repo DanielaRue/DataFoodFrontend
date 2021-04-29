@@ -11,7 +11,11 @@ import ServiciosEmpresa from '@/components/ServiciosEmpresa'
 import CartaEmpresa from '@/components/CartaEmpresa'
 import Roles from '@/components/Roles'
 import Restaurante from '@/components/Restaurante'
-import Estadisticas from '@/components/Estadisticas'
+import Estadisticas from '@/components/Reportes/Estadisticas'
+import Dane from '@/components/Reportes/Dane'
+import Instagram from '@/components/Reportes/Instagram'
+import Facebook from '@/components/Reportes/Facebook'
+import OtrosActores from '@/components/Reportes/OtrosActores'
 import EnConstruccion from '@/components/EnConstruccion'
 
 Vue.use(Router)
@@ -85,6 +89,26 @@ const router = new Router({
       path: '/EnConstruccion',
       name: 'EnConstruccion',
       component: EnConstruccion
+    },
+    {
+      path: '/Dane',
+      name: 'Dane',
+      component: Dane
+    },
+    {
+      path: '/Instagram',
+      name: 'Instagram',
+      component: Instagram
+    },
+    {
+      path: '/Facebook',
+      name: 'Facebook',
+      component: Facebook
+    },
+    {
+      path: '/OtrosActores',
+      name: 'OtrosActores',
+      component: OtrosActores
     },
     
   ]

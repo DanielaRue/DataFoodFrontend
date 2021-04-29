@@ -8,7 +8,7 @@
         </v-btn>
       </template>
       <v-list>
-        <v-list-item link to="./Estadisticas">
+        <v-list-item link to="./Reportes/Estadisticas">
           <v-list-item-title>Estadísticas</v-list-item-title>
         </v-list-item>
         <v-list-item link @click="cerrarSesion">
