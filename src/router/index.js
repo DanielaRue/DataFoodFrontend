@@ -12,6 +12,7 @@ import CartaEmpresa from '@/components/CartaEmpresa'
 import Roles from '@/components/Roles'
 import Restaurante from '@/components/Restaurante'
 import Estadisticas from '@/components/Estadisticas'
+import EnConstruccion from '@/components/EnConstruccion'
 
 Vue.use(Router)
 
@@ -79,6 +80,11 @@ const router = new Router({
       // meta: {
       //   requiresAuth: true
       // }
+    },
+    {
+      path: '/EnConstruccion',
+      name: 'EnConstruccion',
+      component: EnConstruccion
     },
     
   ]

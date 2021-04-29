@@ -1,44 +1,33 @@
 <template>
-  <div>
+  <div class="container text-center">
     <BarraNavegacion />
-    <v-container class="mt-10" text-center>
+    <v-container>
       <v-row>
+        <v-col cols="6">
+          <v-btn class="mt-4" color="#003458" block elevation="4" plain x-large
+            ><v-icon class="mx-5">mdi-google</v-icon>GOOGLE</v-btn
+          >
+        </v-col>
+        <v-col cols="6">
+          <v-btn class="mt-4" color="#003458" block elevation="4" plain x-large
+            ><v-icon class="mx-5">mdi-chart-donut</v-icon>DANE</v-btn
+          >
+        </v-col>
+        <v-col cols="6">
+          <v-btn class="mt-4" color="#003458" block elevation="4" plain x-large
+            ><v-icon class="mx-5">mdi-instagram</v-icon>INSTAGRAM</v-btn
+          >
+        </v-col>
+        <v-col cols="6">
+          <v-btn class="mt-4" color="#003458" block elevation="4" plain x-large
+            ><v-icon class="mx-5">mdi-facebook</v-icon>FACEBOOK</v-btn
+          >
+        </v-col>
         <v-col cols="12">
-          <v-card class="pa-2" elevation="1" outlined tile>
-          </v-card>
-        </v-col>
-        <v-col cols="12">
-          <v-card class="pa-2" elevation="1" outlined tile></v-card>
-        </v-col>
-        <v-col cols="6">
-          <v-card class="pa-2" elevation="1" outlined tile></v-card>
-        </v-col>
-        <v-col cols="6">
-          <v-card class="pa-2" elevation="1" outlined tile></v-card>
-        </v-col>
-        <v-col cols="6">
-          <v-card class="pa-2" elevation="1" outlined tile></v-card>
-        </v-col>
-        <v-col cols="6">
-          <v-card class="pa-2" elevation="1" outlined tile></v-card>
-        </v-col>
-        <v-col cols="6">
-          <v-card class="pa-2" elevation="1" outlined tile></v-card>
-        </v-col>
-        <v-col cols="6">
-          <v-card class="pa-2" elevation="1" outlined tile></v-card>
-        </v-col>
-        <v-col cols="6">
-          <v-card class="pa-2" elevation="1" outlined tile></v-card>
-        </v-col>
-        <v-col cols="6">
-          <v-card class="pa-2" elevation="1" outlined tile></v-card>
-        </v-col>
-        <v-col cols="6">
-          <v-card class="pa-2" elevation="1" outlined tile></v-card>
-        </v-col>
-        <v-col cols="6">
-          <v-card class="pa-2" elevation="1" outlined tile></v-card>
+          <v-btn class="mt-4" color="#003458" block elevation="4" plain x-large
+            ><v-icon class="mx-5">mdi-chart-line</v-icon> OTROS ACTORES DEL
+            MERCADO</v-btn
+          >
         </v-col>
       </v-row>
     </v-container>
@@ -50,12 +39,16 @@ export default {
   components: {
     BarraNavegacion,
   },
-  data(){
-      return {
-        }
-    },
-   
+  data() {
+    return {};
+  },
 };
 </script>
-<style>
+<style scoped>
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 </style>

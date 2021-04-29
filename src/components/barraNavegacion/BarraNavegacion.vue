@@ -2,7 +2,7 @@
   <v-app-bar app color="#FF4B4B" dense dark>
     <router-link to="/">
       <v-btn target="_blank" text>
-        <v-icon>mdi-chart-bubble</v-icon>
+        <span class="mr-2">DATAFOOD</span>
       </v-btn>
     </router-link>
     <v-spacer></v-spacer>

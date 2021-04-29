@@ -1,7 +1,8 @@
 <template>
   <b-container class="container mx-auto">
     <b-row>
-      <b-col></b-col>
+      <b-col>
+      </b-col>
       <b-col cols="5">
         <v-card class="pa-5 mx-auto" min-width="400">
           <form @submit.prevent="submit">
@@ -46,7 +47,14 @@
               </b-row>
             </div>
             <div class="mt-2">
-              <v-btn class="mr-4" color="#FF4B4B" elevation="2" block dark @click="loginUser">
+              <v-btn
+                class="mr-4"
+                color="#FF4B4B"
+                elevation="2"
+                block
+                dark
+                @click="loginUser"
+              >
                 Iniciar Sesión
               </v-btn>
             </div>
@@ -67,7 +75,7 @@ export default {
   data() {
     return {
       emailLogin: "",
-      passwordLogin: "",
+      passwordLogin: ""
     };
   },
   methods: {
@@ -79,10 +87,10 @@ export default {
       axios
         .post("https://jsonplaceholder.typicode.com/posts", json)
         .then((response) => {
-          const token = response.statusText
-          localStorage.setItem("jwt", token)
+          const token = response.statusText;
+          localStorage.setItem("jwt", token);
           console.log(response);
-          this.$router.push('./Principal');
+          this.$router.push("./Principal");
         })
         .catch((error) => console.log(error));
     },

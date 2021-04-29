@@ -6,15 +6,15 @@
         <b-col>
           <div class="mt-3">
             <router-link to="/RegistroEmpresa"
-              ><v-btn class="ma-2" block outlined color="#FF4B4B">
+              ><v-btn class="ma-2" block color="#FF4B4B" elevation="2" plain>
                 Registro
               </v-btn></router-link
             >
-            <v-btn class="ma-2" disabled block outlined color="#FF4B4B">
+            <v-btn class="ma-2" disabled block color="#FF4B4B" elevation="2" plain>
               Carta
             </v-btn>
             <router-link to="/Roles">
-              <v-btn class="ma-2" block outlined color="#FF4B4B">
+              <v-btn class="ma-2" block color="#FF4B4B" elevation="2" plain>
                 Vincular Cuentas
               </v-btn></router-link
             >
