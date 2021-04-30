@@ -8,6 +8,9 @@
         </v-btn>
       </template>
       <v-list>
+        <v-list-item link to="/Perfil">
+          <v-list-item-title>Perfil</v-list-item-title>
+        </v-list-item>
         <v-list-item link to="/Estadisticas">
           <v-list-item-title>Estadísticas</v-list-item-title>
         </v-list-item>

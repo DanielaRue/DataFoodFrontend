@@ -18,6 +18,9 @@ import Facebook from '@/components/Reportes/Facebook'
 import OtrosActores from '@/components/Reportes/OtrosActores'
 import Google from '@/components/Reportes/Google'
 import EnConstruccion from '@/components/EnConstruccion'
+import Lugares from '@/components/Reportes/Lugares'
+import Emociones from '@/components/Reportes/Emociones'
+import PerfilUser from '@/components/PerfilUser'
 
 Vue.use(Router)
 
@@ -115,6 +118,21 @@ const router = new Router({
       path: '/Google',
       name: 'Google',
       component: Google
+    },
+    {
+      path: '/Lugares',
+      name: 'Lugares',
+      component: Lugares
+    },
+    {
+      path: '/Emociones',
+      name: 'Emociones',
+      component: Emociones
+    },
+    {
+      path: '/Perfil',
+      name: 'PerfilUser',
+      component: PerfilUser
     },
     
   ]
