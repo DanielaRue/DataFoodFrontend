@@ -156,6 +156,7 @@
                         <b-form-input
                           type="password"
                           name="contrasenaUser"
+                          v-model="contrasenaUser"
                           aria-describedby="password-help-block"
                           placeholder="Contraseña*"
                         ></b-form-input>
@@ -164,6 +165,7 @@
                         <b-form-input
                           type="password"
                           name="contrasenaConfirmacionUser"
+                          v-model="contrasenaConfirmacionUser"
                           aria-describedby="password-help-block"
                           placeholder="Confirmar contraseña*"
                         ></b-form-input>
@@ -282,22 +284,22 @@ export default {
     registrarUsuario() {
       axios
         .post("https://jsonplaceholder.typicode.com/posts", {
-          nombre: this.nombreUser,
-          apellido: this.apellidoUser,
-          tipoid: this.selectedID,
-          id: this.numIDUser,
+          nombre_usuario: this.nombreUser,
+          apellido_usuario: this.apellidoUser,
+          tipo_identificacion: this.selectedID,
+          numero_identificacion: this.numIDUser,
           genero: this.selectedGender,
-          estado: this.selectedState,
-          nacimiento: this.value,
+          //estado_usuario: this.selectedState,
+          fecha_nacimiento: this.value,
           pais: this.selectedCountry,
           ciudad: this.selectedCity,
-          barrio: this.barrioUser,
-          direccion: this.direccionUser,
-          celular: this.celularUser,
-          correo: this.correoUser,
-          contrasena: this.contrasenaUser,
-          privacidad: this.status,
-          preferencias: this.selected,
+          //barrio: this.barrioUser,
+          //direccion: this.direccionUser,
+          telefono: this.celularUser,
+          correo_electronico: this.correoUser,
+          pws: this.contrasenaUser,
+          aceptacion_terminos: this.status,
+          //preferencias: this.selected,
         })
         .then((response) => {
           this.$router.push("/InicioSesion");
