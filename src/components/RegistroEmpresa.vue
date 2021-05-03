@@ -200,6 +200,7 @@
                         <b-form-input
                           type="password"
                           name="contresenaEmpresa"
+                          v-model="contrasenaEmpresa"
                           aria-describedby="password-help-block"
                           placeholder="Contraseña"
                         ></b-form-input>
@@ -208,6 +209,7 @@
                         <b-form-input
                           type="password"
                           name="contrasenaConfirmacionEmpresa"
+                          v-model="contrasenaConfirmacionEmpresa"
                           aria-describedby="password-help-block"
                           placeholder="Confirmar contraseña"
                         ></b-form-input>

@@ -48,9 +48,6 @@ export default {
     };
   },
   methods: {
-    // submit() {
-    //   this.$v.$touch();
-    // },
   },
 };
 </script>
