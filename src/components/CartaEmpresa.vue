@@ -10,7 +10,14 @@
                 Registro
               </v-btn></router-link
             >
-            <v-btn class="ma-2" disabled block color="#FF4B4B" elevation="2" plain>
+            <v-btn
+              class="ma-2"
+              disabled
+              block
+              color="#FF4B4B"
+              elevation="2"
+              plain
+            >
               Carta
             </v-btn>
             <router-link to="/Roles">
@@ -28,7 +35,9 @@
             </h6>
             <DesplegableMenu :es-editable="true" />
             <div class="ubicacionBotones mt-4">
-              <v-btn color="#41C5D3" dark @click="guardarCartaEmpresa">Guardar</v-btn>
+              <v-btn color="#41C5D3" dark @click="guardarCartaEmpresa"
+                >Guardar</v-btn
+              >
             </div>
           </div>
         </b-col>
@@ -38,23 +47,55 @@
   </div>
 </template>
 <script>
-import BarraNavegacion from './barraNavegacion/BarraNavegacion'
-import DesplegableMenu from './DesplegableMenu'
+import BarraNavegacion from "./barraNavegacion/BarraNavegacion";
+import DesplegableMenu from "./DesplegableMenu";
+import axios from "axios";
 export default {
-  components:{
+  components: {
     BarraNavegacion,
-    DesplegableMenu
+    DesplegableMenu,
   },
   data() {
-    return {
-      
-    };
+    return {};
   },
-  methods:{
-    guardarCartaEmpresa(){
-      this.$router.push("/Roles")
-    }
-  }
+  methods: {
+    guardarCartaEmpresa() {
+      axios
+        .post("https://jsonplaceholder.typicode.com/posts", {
+          fuertes: this.fuertes,
+          entradas: this.entradas,
+          ensaladas: this.ensaladas,
+          postres: this.postres,
+          bebidas: this.bebidas,
+          otros: this.otros,
+          precioPlato: this.precioPlato,
+          nombrePlato: this.nombrePlato,
+          descripcionPlato: this.descripcionPlato,
+          precioPlatoFuerte: this.precioPlatoFuerte,
+          nombrePlatoFuerte: this.nombrePlatoFuerte,
+          descripcionPlatoFuerte: this.descripcionPlatoFuerte,
+          precioPlatoEnsalada: this.precioPlatoEnsalada,
+          nombrePlatoEnsalada: this.nombrePlatoEnsalada,
+          descripcionPlatoEnsalada: this.descripcionPlatoEnsalada,
+          precioPlatoPostre: this.precioPlatoPostre,
+          nombrePlatoPostre: this.nombrePlatoPostre,
+          descripcionPlatoPostre: this.descripcionPlatoPostre,
+          precioBebida: this.precioBebida,
+          nombreBebida: this.nombreBebida,
+          descripcionBebida: this.descripcionBebida,
+          precioOtro: this.precioOtro,
+          nombreOtro: this.nombreOtro,
+          descripcionOtro: this.descripcionOtro,
+        })
+        .then((response) => {
+          this.$router.push("/Roles");
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
 };
 </script>
 <style>

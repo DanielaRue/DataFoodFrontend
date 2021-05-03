@@ -17,7 +17,6 @@ import Instagram from '@/components/Reportes/Instagram'
 import Facebook from '@/components/Reportes/Facebook'
 import OtrosActores from '@/components/Reportes/OtrosActores'
 import Google from '@/components/Reportes/Google'
-import EnConstruccion from '@/components/EnConstruccion'
 import Lugares from '@/components/Reportes/Lugares'
 import Emociones from '@/components/Reportes/Emociones'
 import PerfilUser from '@/components/PerfilUser'
@@ -88,11 +87,6 @@ const router = new Router({
       // meta: {
       //   requiresAuth: true
       // }
-    },
-    {
-      path: '/EnConstruccion',
-      name: 'EnConstruccion',
-      component: EnConstruccion
     },
     {
       path: '/Dane',

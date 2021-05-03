@@ -16,7 +16,14 @@
               </v-btn></router-link
             >
             <router-link to="/Roles"
-              ><v-btn class="ma-2" disabled block color="#FF4B4B" elevation="2" plain>
+              ><v-btn
+                class="ma-2"
+                disabled
+                block
+                color="#FF4B4B"
+                elevation="2"
+                plain
+              >
                 Vincular Cuentas
               </v-btn></router-link
             >
@@ -63,6 +70,7 @@
 </template>
 <script>
 import BarraNavegacion from "./barraNavegacion/BarraNavegacion";
+import axios from "axios";
 export default {
   components: {
     BarraNavegacion,
@@ -109,7 +117,20 @@ export default {
       localStorage.setItem("roles", parsed);
     },
     guardarRolesEmpresa() {
-      this.$router.push("/InicioSesion");
+      axios
+        .post("https://jsonplaceholder.typicode.com/posts", {
+          newRole: this.newRole,
+          roles: this.roles,
+          computed: this.computed,
+          selectedRole: this.selectedRole,
+        })
+        .then((response) => {
+          this.$router.push("/InicioSesion");
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     },
   },
 };

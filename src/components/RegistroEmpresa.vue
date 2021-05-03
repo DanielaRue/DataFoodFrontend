@@ -5,7 +5,14 @@
       <b-row>
         <b-col>
           <div class="mt-3">
-            <v-btn class="ma-2" disabled block color="#FF4B4B" elevation="2" plain>
+            <v-btn
+              class="ma-2"
+              disabled
+              block
+              color="#FF4B4B"
+              elevation="2"
+              plain
+            >
               Registro
             </v-btn>
             <router-link to="/CartaEmpresa"
@@ -310,10 +317,9 @@
                 </b-card>
               </b-card-group>
             </div>
-
             <div class="ubicacionBotones">
-              <router-link to="/ServiciosEmpresa">
-                <v-btn color="#41C5D3" dark>Continuar</v-btn></router-link
+              <v-btn color="#41C5D3" dark @click="registrarEmpresa"
+                >Continuar</v-btn
               >
             </div>
           </div>
@@ -324,10 +330,11 @@
   </div>
 </template>
 <script>
-import BarraNavegacion from './barraNavegacion/BarraNavegacion'
+import axios from "axios";
+import BarraNavegacion from "./barraNavegacion/BarraNavegacion";
 export default {
-  components:{
-    BarraNavegacion
+  components: {
+    BarraNavegacion,
   },
   data() {
     return {
@@ -363,6 +370,39 @@ export default {
         { value: "1", text: "Colombia" },
       ],
     };
+  },
+  methods: {
+    registrarEmpresa() {
+      axios
+        .post("https://jsonplaceholder.typicode.com/posts", {
+          nombreRepLegal: this.nombreRepLegal,
+          apellidoRepLegal: this.apellidoRepLegal,
+          direccionRepLegal: this.direccionRepLegal,
+          fotoEmpresa: this.fotoEmpresa,
+          nitEmpresa: this.nitEmpresa,
+          direccionEmpresa: this.direccionEmpresa,
+          barrioEmpresa: this.barrioEmpresa,
+          telefonoEmpresa: this.telefonoEmpresa,
+          movilEmpresa: this.movilEmpresa,
+          aperturaEmpresa: this.aperturaEmpresa,
+          cerradaEmpresa: this.cerradaEmpresa,
+          correoEmpresa: this.correoEmpresa,
+          contrasenaEmpresa: this.contrasenaEmpresa,
+          contrasenaConfirmacionEmpresa: this.contrasenaConfirmacionEmpresa,
+          facturacionEmpresa: this.facturacionEmpresa,
+          aforoEmpresa: this.aforoEmpresa,
+          instagramEmpresa: this.instagramEmpresa,
+          facebookEmpresa: this.facebookEmpresa,
+          twitterEmpresa: this.twitterEmpresa,
+          selected: this.selected,
+          selectedPais: this.selectedPais,
+        })
+        .then((response) => {
+          this.$router.push("/ServiciosEmpresa");
+          console.log(response);
+        })
+        .catch((error) => console.log(error));
+    },
   },
 };
 </script>

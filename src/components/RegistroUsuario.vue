@@ -50,6 +50,7 @@
                       <b-col sm="6">
                         <b-form-input
                           name="numIDUser"
+                          v-model="numIDUser"
                           placeholder="Número de documento"
                         ></b-form-input>
                       </b-col>
@@ -106,6 +107,7 @@
                       <b-col sm="6">
                         <b-form-input
                           name="direccionUser"
+                          v-model="direccionUser"
                           placeholder="Dirección"
                         ></b-form-input>
                       </b-col>
@@ -121,6 +123,7 @@
                       <b-col sm="6">
                         <b-form-input
                           name="barrioUser"
+                          v-model="barrioUser"
                           placeholder="Barrio"
                         ></b-form-input>
                       </b-col>
@@ -132,12 +135,14 @@
                       <b-col sm="4">
                         <b-form-input
                           name="celularUser"
+                          v-model="celularUser"
                           placeholder="Número de celular*"
                         ></b-form-input>
                       </b-col>
                       <b-col sm="6">
                         <b-form-input
                           name="correoUser"
+                          v-model="correoUser"
                           type="email"
                           placeholder="Correo electronico*"
                         ></b-form-input>

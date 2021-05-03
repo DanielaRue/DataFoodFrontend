@@ -5,7 +5,14 @@
       <b-row>
         <b-col>
           <div class="mt-3">
-            <v-btn class="ma-2" disabled block color="#FF4B4B" elevation="2" plain>
+            <v-btn
+              class="ma-2"
+              disabled
+              block
+              color="#FF4B4B"
+              elevation="2"
+              plain
+            >
               Registro
             </v-btn>
             <router-link to="/CartaEmpresa"
@@ -384,7 +391,9 @@
               </b-form-group>
             </div>
             <div class="ubicacionBotones">
-              <v-btn color="#41C5D3" dark @click="crearEmpresa">Guardar</v-btn>
+              <v-btn color="#41C5D3" dark @click="registrarServiciosEmpresa"
+                >Guardar</v-btn
+              >
             </div>
           </div>
         </b-col>
@@ -394,10 +403,11 @@
   </div>
 </template>
 <script>
-import BarraNavegacion from './barraNavegacion/BarraNavegacion'
+import axios from "axios";
+import BarraNavegacion from "./barraNavegacion/BarraNavegacion";
 export default {
-  components:{
-    BarraNavegacion
+  components: {
+    BarraNavegacion,
   },
   data() {
     return {
@@ -611,11 +621,28 @@ export default {
       );
     },
   },
-  methods:{
-    crearEmpresa(){
-      this.$router.push("/CartaEmpresa")
-    }
-  }
+  methods: {
+    registrarServiciosEmpresa() {
+      axios
+        .post("https://jsonplaceholder.typicode.com/posts", {
+          value: this.value,
+          selected: this.selected,
+          valueTipoComida: this.valueTipoComida,
+          valueTipoCocina: this.valueTipoCocina,
+          valueDietasEspeciales: this.valueDietasEspeciales,
+          valueIdealPara: this.valueIdealPara,
+          valueServicios: this.valueServicios,
+          valuePagos: this.valuePagos,
+        })
+        .then((response) => {
+          this.$router.push("/CartaEmpresa");
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
 };
 </script>
 <style>
