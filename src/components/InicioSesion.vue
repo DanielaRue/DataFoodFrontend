@@ -155,7 +155,7 @@ export default {
         password: this.passwordLogin,
       };
       axios
-        .post("https://jsonplaceholder.typicode.com/posts", json)
+        .post("http://localhost:8080/api/usuario/login", json)
         .then((response) => {
           const token = response.statusText;
           localStorage.setItem("jwt", token);

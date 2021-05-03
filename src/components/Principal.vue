@@ -128,6 +128,7 @@
 
 <script>
 import BarraNavegacion from "./barraNavegacion/BarraNavegacion";
+import axios from "axios"
 export default {
   name: "Principal",
   components: {
@@ -136,7 +137,7 @@ export default {
   data() {
     return {
       dialog: false,
-      listaRestaurantes: [{}],
+      listaRestaurantes: [],
       itemsFiltros: [
         { title: "Zona", icon: "mdi-view-dashboard" },
         { title: "Tipo de establecimiento", icon: "mdi-silverware-fork-knife" },
@@ -192,21 +193,27 @@ export default {
       ],
     };
   },
-  mounted() {},
+  mounted(){
+    this.listarRestaurantes
+  },
   methods: {
     verMas() {
       this.$router.push("/Restaurante");
     },
+    listarRestaurantes(){
+      axios.get("")
+      .then((response) => {
+        this.listaRestaurantes = response.data
+        })
+      .catch((error)=>{
+        console.log(error)
+      })
+    }
   },
 };
 </script>
 
 <style scoped>
-/* .h3 {
-  margin-top: 35px;
-  margin-left: 30px;
-  text-align: left;
-} */
 .ubicacionBotones {
   text-align: right;
   margin-left: 450px;
@@ -220,7 +227,6 @@ export default {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: left; */
 }
 sm,
 .container-md,

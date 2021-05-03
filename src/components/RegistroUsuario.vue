@@ -283,7 +283,7 @@ export default {
     },
     registrarUsuario() {
       axios
-        .post("https://jsonplaceholder.typicode.com/posts", {
+        .post("http://localhost:8080/api/usuario/registrar", {
           nombre_usuario: this.nombreUser,
           apellido_usuario: this.apellidoUser,
           tipo_identificacion: this.selectedID,

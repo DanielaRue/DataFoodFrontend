@@ -377,7 +377,7 @@ export default {
   methods: {
     registrarEmpresa() {
       axios
-        .post("https://jsonplaceholder.typicode.com/posts", {
+        .post("http://localhost:8080/api/empresa/registrar", {
           // nombreRepLegal: this.nombreRepLegal,
           // apellidoRepLegal: this.apellidoRepLegal,
           // direccionRepLegal: this.direccionRepLegal,
